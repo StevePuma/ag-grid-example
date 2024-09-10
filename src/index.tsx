@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SisenseContextProvider } from '@sisense/sdk-ui';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+      <SisenseContextProvider
+        url="" // replace with the URL of your Sisense instance
+        token="" // replace with the API token of your user account
+      >
     <App />
+    </SisenseContextProvider>
   </React.StrictMode>
 );
 
